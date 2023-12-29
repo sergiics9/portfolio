@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "December 2023",
+    title: "ISDI Coders - Bootcamp Full stack",
+    description:
+      "More than 1000 hours of programming (13 face-to-face weeks + 8 weeks online). Full stack: MERN & MEAN. APIs management: CRUD system in Node (Express). Database management: Sql (SQL Server) and NoSql (MongoDB). Testing with Jest. Good practices: TDD, SOLID, Unit Testing, mental models, multilayered architecture, Github actions",
+    link: "https://programas.isdicoders.com/programas-full-stack-np?utm_source=Google_Ads_Search&utm_medium=cpc&utm_campaign=Search_ONL_marca_ES&utm_content=Google_Search&gclid=CjwKCAiA-bmsBhAGEiwAoaQNmjGAvn5NidEjd3thk8vrQtLeqn7lpsSTcz7uHTnACkCHVtN9u0-3PBoCJncQAvD_BwE",
+  },
+  {
+    date: "February 2023",
+    title: "PC Alfaz - Computer technician",
+    description:
+      "Configuration and maintenance of equipment, installation of software, repair of systems, assembly of equipment ensuring quality and safety, rethink the wiring of a local network, install and configure local wired networks, data recovery, prepare budgets, advise and assist the customer, apply safety protocols, quality and respect for the environment.",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
