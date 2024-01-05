@@ -10,6 +10,7 @@ import Experience from "../components/Experience.astro"
 import Briefcase from "../components/icons/Briefcase.astro"
 import CodeIcon from "../components/icons/Code.astro"
 import Projects from "../components/Projects.astro"
+import Education from "../components/Education.astro"
 ---
 
 <Layout
@@ -67,6 +68,16 @@ import Projects from "../components/Projects.astro"
            sergi20031005@gmail.com
         </SocialPill>
       </nav>
+    </SectionContainer>
+
+    <SectionContainer id="Education">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <Briefcase class="size-7" />
+         Education
+      </h2>
+      <Education />
     </SectionContainer>
 
     <SectionContainer id="Experience">
