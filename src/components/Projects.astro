@@ -1,0 +1,150 @@
+---
+import ReactJS from './icons/ReactJS.astro';
+import sass from './icons/sass.astro';
+import jest from './icons/jest.astro';
+import typescript from './icons/typescript.astro';
+import express from './icons/express.astro';
+import redux from './icons/redux.astro';
+import Next from './icons/Next.astro';
+import Tailwind from './icons/Tailwind.astro';
+import Prisma from './icons/Prisma.astro';
+import Postgre from './icons/Postgre.astro';
+import Node from './icons/Node.astro';
+import Docker from './icons/Docker.astro';
+
+const TAGS = {
+  REACT: {
+    name: 'React.js',
+    class: 'bg-blue-600 text-white font-bold',
+    icon: ReactJS,
+  },
+  redux: {
+    name: 'Redux',
+    class: 'bg-[#a366ff] text-white font-bold',
+    icon: redux,
+  },
+  sass: {
+    name: 'SASS - SCSS',
+    class: 'bg-[#fbabff] text-white font-bold',
+    icon: sass,
+  },
+  jest: {
+    name: 'Jest',
+    class: 'bg-[#f7a868] text-white font-bold',
+    icon: jest,
+  },
+  typescript: {
+    name: 'Typescript',
+    class: 'bg-[#7faafa] text-white font-bold',
+    icon: typescript,
+  },
+  express: {
+    name: 'Express',
+    class: 'bg-[#b4d400] text-white font-bold',
+    icon: express,
+  },
+  Next: {
+    name: 'NextJS',
+    class: 'bg-[#656565] text-white font-bold',
+    icon: Next,
+  },
+  Docker: {
+    name: 'Docker',
+    class: 'bg-[#002fff] text-white font-bold',
+    icon: Docker,
+  },
+  Node: {
+    name: 'NodeJS',
+    class: 'bg-[#a3ff61] text-white font-bold',
+    icon: Node,
+  },
+  Postgre: {
+    name: 'PostgreSQL',
+    class: 'bg-[#00c3ff] text-white font-bold',
+    icon: Postgre,
+  },
+  Prisma: {
+    name: 'Prisma',
+    class: 'bg-[#61daff] text-white font-bold',
+    icon: Prisma,
+  },
+  Tailwind: {
+    name: 'Tailwind',
+    class: 'bg-[#61ffed] text-white font-bold',
+    icon: Tailwind,
+  },
+};
+const PROJECTS = [
+  {
+    title: 'CS2 HUB - A beautiful CS2 Skins list',
+    description:
+      "Front-end created with React.js, SCSS, Redux & Typescript. Back-end created with Express.js, Typescript & multer. 100% Tested with Jest. It's a library with Skins of CS2. Optimized for SEO and performance. Administrators can make the CRUD functions.",
+    link: 'https://cs2hub.vercel.app/',
+    github: 'https://github.com/pheralb/cs2hub',
+    image: '/projects/cs2hub.webp',
+    tags: [
+      TAGS.REACT,
+      TAGS.redux,
+      TAGS.sass,
+      TAGS.jest,
+      TAGS.typescript,
+      TAGS.express,
+    ],
+  },
+  {
+    title: 'PokéAPI - An amazing Pokédex!',
+    description:
+      'Front-end created with Typescript & SCSS making requests to the Pokemon API. Each file has its own unit test with Jest.',
+    link: 'https://202309-w3ch5-sergi-casiano.vercel.app/',
+    github: 'https://github.com/sergiics9/poke-api',
+    image: '/projects/pokeapi.webp',
+    tags: [TAGS.sass, TAGS.jest, TAGS.typescript],
+  },
+  {
+    title: 'Teslo Shop - Buy your clothes in this  E-commerce!',
+    description:
+      'In this project, I tested my best practices and the way I organise the structure of a project. Next.js has brought innovations and has significantly transformed the way websites are built. The use of Server Actions greatly improves the maintainability of the code and the execution of functions. It contains two roles, one as a user that can do the basics like buying products and the admin role that can perform the functions of a CRUD, manage users and orders. Technologies used: TypeScript, Next, Tailwind, Node.js, Docker, PostgreSQL, Eslint, bcrypt, Cloudinary, clsx, Prisma, Paypal, Swiper and Zustand. - Next-auth for authenticating user registration. - Zustand for global status management. - Paypal as payment gateway. - PostgreSQL for the database and Prisma for migrations. - Swiper for slides in images.',
+    link: 'https://202309-w3ch5-sergi-casiano.vercel.app/',
+    github: 'https://github.com/sergiics9/poke-api',
+    image: '/projects/teslo.webp',
+    tags: [
+      TAGS.Tailwind,
+      TAGS.Next,
+      TAGS.typescript,
+      TAGS.Prisma,
+      TAGS.Postgre,
+      TAGS.Node,
+      TAGS.Docker,
+    ],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2 mt-5">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        loading="lazy"
+        class="rounded shadow-2xl shadow-white/10 aspect-video"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}

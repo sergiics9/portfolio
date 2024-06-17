@@ -1,0 +1,32 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCIE = [
+  {
+    date: 'December 2023 - April 2024',
+    title: ' Suite Solutions Agency - FullStack Developer',
+    description: 'MERN Stack project',
+  },
+  {
+    date: 'February 2023 - July 2023',
+    title: 'Zero+ - Front-End Developer',
+    description:
+      'Perform daily maintenance of a website with Javascript and layout with Sass, as well as scripting with Python and using MYSQL for the database.',
+  },
+  {
+    date: 'February 2021 - July 2021',
+    title: 'PC Alfaz - Computer technician',
+    description:
+      'Configuration and maintenance of equipment, installation of software, repair of systems, assembly of equipment ensuring quality and safety, rethink the wiring of a local network, install and configure local wired networks, data recovery, prepare budgets, advise and assist the customer, apply safety protocols, quality and respect for the environment.',
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

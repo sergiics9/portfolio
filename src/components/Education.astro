@@ -1,0 +1,34 @@
+---
+import EducationItem from './EducationItem.astro';
+const EDUCATION = [
+  {
+    date: 'August 2023 - December 2023',
+    title: 'ISDI Coders - Bootcamp Full stack',
+    description:
+      'More than 1000 hours of programming (13 face-to-face weeks + 8 weeks online). Full stack: MERN & MEAN. APIs management: CRUD system in Node (Express). Database management: Sql (SQL Server) and NoSql (MongoDB). Testing with Jest. Good practices: TDD, SOLID, Unit Testing, mental models, multilayered architecture, Github actions',
+    link: 'https://programas.isdicoders.com/programas-full-stack-np?utm_source=Google_Ads_Search&utm_medium=cpc&utm_campaign=Search_ONL_marca_ES&utm_content=Google_Search&gclid=CjwKCAiA-bmsBhAGEiwAoaQNmjGAvn5NidEjd3thk8vrQtLeqn7lpsSTcz7uHTnACkCHVtN9u0-3PBoCJncQAvD_BwE',
+  },
+  {
+    date: 'September 2021 - July 2023',
+    title: 'IES Pere Maria Orts i Bosch - Superior Degree',
+    description:
+      'Web development in client and server side with 𝐉𝐚𝐯𝐚𝐬𝐜𝐫𝐢𝐩𝐭, Angular, 𝐏𝐲𝐭𝐡𝐨𝐧, & 𝐒𝐐𝐋',
+  },
+  {
+    date: 'September 2019 - July 2021',
+    title: 'IES Pere Maria Orts i Bosch - Medium degree',
+    description:
+      'Installation and maintenance of equipment, computer security, local networks and operating systems (Windows and Linux). Web development in client and server environment. with 𝐇𝐓𝐌𝐋, 𝐂𝐒𝐒 & 𝐉𝐚𝐯𝐚𝐬𝐜𝐫𝐢𝐩𝐭.',
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EDUCATION.map((education) => (
+      <li class="mb-10 ms-4">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>
